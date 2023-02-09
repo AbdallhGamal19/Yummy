@@ -1,0 +1,177 @@
+
+
+* {
+    box-sizing: border-box;
+}
+
+.colorDsc {
+    color: #ffffd8;
+}
+.sidebar {
+    width: 210px;
+    min-width: 200px;
+    z-index: 9999;
+    position: fixed;
+    left: 0;
+    top: 0;
+} 
+.sidebar .list ul li {
+    position: absolute;
+    top: 100%;
+    padding: 10px 0;
+    transition: 0.5s;
+}
+
+.sidebar .list ul li a {
+    color: #ffffd8;
+}
+.sidebar .list ul li:hover {
+    margin-left: 10px;
+}
+.sidebar .list .icons i {
+    margin-right: 5px;
+}
+.sidebar .list footer {
+    color:#868686;
+}
+.sidebar .list p {
+    font-size: 10px;
+}
+.sidebar .logo-and-toggle {
+    min-width: min-content;
+}
+.sidebar .logo-and-toggle img {
+    width: 40px;
+}
+.sidebar .list ul li:hover a,
+.sidebar .list .icons i:hover,
+.sidebar .logo-and-toggle img:hover,
+.sidebar .logo-and-toggle i:hover {
+    cursor: pointer;
+    color: #EE9F0E;
+    transition: 0.3s;
+}
+.item {
+    cursor: pointer;
+}
+.item .box {
+    position: relative;
+ 
+}
+.item .lier{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 100%;
+    height: 100%;
+    transition: 0.5s;
+    background-color: #f8f6f58e;
+    
+    
+}
+.item .box:hover.box .lier {
+    top: 0;
+}
+.Ingredient-card {
+    background-color: #d4edda;
+}
+.youtube-btn a {
+    transition: 0.3s;
+}
+.youtube-btn:hover a {
+    color: white !important;
+}
+
+.belding,.food {
+    color: #02590e;
+}
+.boxInArea {
+    transition: 0.5s;
+}
+.boxInArea:hover{
+    
+    transform: scale(1.1);
+}
+
+.searchBox input {
+    width: 45%;
+    padding: 10px;
+    background-color: transparent;
+    border-color: transparent transparent #8C8C8C transparent ;
+    outline: none;
+    color: white;
+}
+.leftInputs,.rightInputs {
+    width: 100%;
+}
+ 
+.contact .container input {
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #8C8C8C;
+    background-color: transparent;
+    color: rgb(190, 190, 190);
+    padding: 5px 10px;
+    box-shadow: 0 .5rem 1rem rgba(255,255,255,.2)!important;
+    margin-bottom: 5px;
+    display: block;
+    width: 90%;
+    padding: 5px;
+    margin-bottom: 15px;
+}
+
+@media screen and (max-width: 992px) {
+    .contact .container {
+      flex-direction: column;
+    }
+  }
+  
+
+
+.loading {
+    inset: 0;
+    height: 100vh;
+    z-index: 9999999999999;
+}
+
+.loader {
+    z-index: 9999999;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%);
+    animation: rotate 1s linear infinite;
+  }
+  .loader::before , .loader::after {
+    content: "";
+    box-sizing: border-box;
+    position: absolute;
+    inset: 0px;
+    border-radius: 50%;
+    border: 5px solid #FFF;
+    animation: prixClipFix 2s linear infinite ;
+  }
+  .loader::after{
+    border-color: #EE9F0E;
+    animation: prixClipFix 2s linear infinite , rotate 0.5s linear infinite reverse;
+    inset: 6px;
+  }
+
+  @keyframes rotate {
+    0%   {transform: rotate(0deg)}
+    100%   {transform: rotate(360deg)}
+  }
+
+  @keyframes prixClipFix {
+      0%   {clip-path:polygon(50% 50%,0 0,0 0,0 0,0 0,0 0)}
+      25%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 0,100% 0,100% 0)}
+      50%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,100% 100%,100% 100%)}
+      75%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,0 100%,0 100%)}
+      100% {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,0 100%,0 0)}
+  }
